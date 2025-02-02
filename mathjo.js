@@ -25,7 +25,7 @@ const MathJo = {
     },
 
     /**
-     * Return the 2D Euclidian distance between points (x1,y1) and (x2,y2)
+     * Return the 2D Euclidean distance between points (x1,y1) and (x2,y2)
      * @param x1 the x-position of point 1
      * @param y1 the y-position of point 1
      * @param x2 the x-position of point 2
