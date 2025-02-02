@@ -78,7 +78,7 @@ const MathJo = {
      * @return A new array with truncated values.
      */
     truncateArray: function (c, y) {
-        return c.map(num => Maths.truncateNumber(num, y));
+        return c.map(num => MathJo.truncateNumber(num, y));
     },
 
     /**
