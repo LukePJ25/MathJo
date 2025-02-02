@@ -25,6 +25,18 @@ const MathJo = {
     },
 
     /**
+     * Return the 2D Euclidian distance between points (x1,y1) and (x2,y2)
+     * @param x1 the x-position of point 1
+     * @param y1 the y-position of point 1
+     * @param x2 the x-position of point 2
+     * @param y2 the y-position of point 2
+     * @return the distance between (x1,y1) and (x2,y2)
+     */
+    getDistanceTwoPoints: function (x1, y1, x2, y2) {
+        return Math.hypot(x1 - x2, y1 - y2);
+    },
+
+    /**
      * Converts an angle in radians to a normalized direction vector.
      * @param a The angle in radians.
      * @return A unit vector [x, y] representing the direction.
@@ -60,6 +72,16 @@ const MathJo = {
     },
 
     /**
+     * Truncates all numbers in an array to a specified number of decimal places.
+     * @param c The array of numbers.
+     * @param y The number of decimal places.
+     * @return A new array with truncated values.
+     */
+    truncateArray: function (c, y) {
+        return c.map(num => Maths.truncateNumber(num, y));
+    },
+
+    /**
      * Truncates a number to a specified number of decimal places.
      * @param x The number to truncate.
      * @param y The number of decimal places.
@@ -68,16 +90,6 @@ const MathJo = {
     truncateNumber: function (x, y) {
         const factor = Math.pow(10, y);
         return Math.trunc(x * factor) / factor;
-    },
-
-    /**
-     * Truncates all numbers in an array to a specified number of decimal places.
-     * @param c The array of numbers.
-     * @param y The number of decimal places.
-     * @return A new array with truncated values.
-     */
-    truncateArray: function (c, y) {
-        return c.map(num => Maths.truncateNumber(num, y));
     },
 
     /**
