@@ -1,4 +1,4 @@
-const Maths = {
+const MathJo = {
     /**
      * Clamps a given value within a specified range.
      * @param v The value to clamp.
@@ -89,4 +89,6 @@ const Maths = {
     wrapValue: function (v, max) {
         return ((v % max) + max) % max;
     }
-}
+};
+
+export default MathJo;
